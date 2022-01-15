@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "./Calendar.scss";
-import 'react-calendar/dist/Calendar.css';
 
 export const Schedule= () => {
-  const [value, onChange] = useState(new Date());
+  const [value, onClickDay] = useState(new Date());
+console.log(value);
+//Thu Jan 20 2022 00:00:00 GMT+0000 (Greenwich Mean Time)
 
   return (
-    <div>
-      <Calendar onChange={onChange} value={value} />
-    </div>
+      <Calendar onClickDay={onClickDay} value={value} />
   );
 };
 

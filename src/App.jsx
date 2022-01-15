@@ -1,10 +1,12 @@
-import './App.scss';
+import "./App.scss";
 import Calendar from "./components/Calendar/Calendar";
 
 function App() {
   return (
     <div className="events">
-      <Calendar />
+      <div className="events__container">
+        <Calendar />
+      </div>
     </div>
   );
 }

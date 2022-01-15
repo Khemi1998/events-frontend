@@ -1,2 +1,27 @@
 @use "./assets/styles/typography" as *;
 @use "./assets/styles/variables" as *;
+
+.events {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient($color-primary, $color-secondary);
+  align-items: center;
+  &__container {
+    background-color: $color-tertiary;
+    border-radius: 1rem;
+    width: 90%;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem black;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .events {
+    &__container {
+      display: flex;
+      align-items: center;
+      height: 60vh;
+      width: fit-content;
+    }
+  }
+}
