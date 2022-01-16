@@ -58,10 +58,14 @@ export const RightMenu = (props) => {
   ];
 
   const filteredListings = mockData.map((event) => {
-    let monthConvert="";
-    let dayConvert="";
-    if (month+1<10? monthConvert=`0${month+1}`: monthConvert=`${month+1}`);
-    if (day<10? dayConvert=`0${date}`: dayConvert=`${date}`);
+    let monthConvert = "";
+    let dayConvert = "";
+    if (
+      month + 1 < 10
+        ? (monthConvert = `0${month + 1}`)
+        : (monthConvert = `${month + 1}`)
+    );
+    if (day < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
     if (event.date === `${year}-${monthConvert}-${dayConvert}`) {
       return (
         <FilteredCard
@@ -80,7 +84,6 @@ export const RightMenu = (props) => {
       <h2>
         {days[day]} {date} {months[month]} {year}
       </h2>
-      <p>{filteredListings.length} Result(s)</p>
       <div className="rightmenu__results">{filteredListings}</div>
     </div>
   );
