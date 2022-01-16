@@ -1,0 +1,67 @@
+@use "../../assets/styles/variables" as *;
+
+.log-form {
+  width: 79%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    display: block;
+    width: 100%;
+    padding: 1em;
+  }
+  
+  h2 {
+    width: 100%;
+    color: lighten(grey, 20%);
+    font-size: 1.35em;
+    display: block;
+    background: $color-secondary;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+    border: 1px solid darken(grey, 5%);
+    margin: 0;
+    font-weight: 200;
+  }
+  
+  input {
+    display: block;
+    margin: auto auto;
+    width: 80%;
+    margin-bottom: 1em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1em;
+    color: #757575;
+    border-radius: 1rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .btn {
+    display: inline-block;
+    background: $color-secondary;
+    border: 1px solid darken($color-secondary, 5%);
+    padding: .5em 2em;
+    color: white;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
+    &:hover {
+      background: lighten($color-secondary, 5%);
+    }
+    &:active {
+      background: $color-secondary; 
+      box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+

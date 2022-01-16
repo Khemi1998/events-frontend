@@ -1,5 +1,6 @@
 import React from "react";
 import "./LeftMenu.scss";
+import Form from "../../components/Form/Form";
 import sunrise from "../../assets/images/sunrise.png";
 import sun from "../../assets/images/sun.png";
 import moon from "../../assets/images/moon.png";
@@ -20,12 +21,11 @@ export const LeftMenu = () => {
   }
   return (
     <div className="leftmenu">
-        <header className="greeting">
-          <img src={greetingImg} className="greeting__img" alt={greetingTime} />
-          <h1 className="greeting__heading">
-            Good {greetingTime}
-          </h1>
-        </header>
+      <header className="greeting">
+        <img src={greetingImg} className="greeting__img" alt={greetingTime} />
+        <h1 className="greeting__heading">Good {greetingTime}</h1>
+      </header>
+      <Form />
     </div>
   );
 };

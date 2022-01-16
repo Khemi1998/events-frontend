@@ -22,5 +22,10 @@
 
   .greeting {
     flex-direction: column;
+    align-items: center;
+    &__img{
+      height: 70%;
+      width: fit-content;
+    }
   }
 }
