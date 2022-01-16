@@ -4,8 +4,11 @@ import Form from "../../components/Form/Form";
 import sunrise from "../../assets/images/sunrise.png";
 import sun from "../../assets/images/sun.png";
 import moon from "../../assets/images/moon.png";
+import { useState } from "react/cjs/react.development";
 
-export const LeftMenu = () => {
+export const LeftMenu = (props) => {
+  const { toggleAllEvents } = props;
+
   const currentHour = new Date().getHours();
   let greetingImg = sunrise;
   let greetingTime = "Morning!";
@@ -19,13 +22,14 @@ export const LeftMenu = () => {
     greetingImg = moon;
     greetingTime = "Evening!";
   }
+
   return (
     <div className="leftmenu">
       <header className="greeting">
         <img src={greetingImg} className="greeting__img" alt={greetingTime} />
         <h1 className="greeting__heading">Good {greetingTime}</h1>
       </header>
-      <button>View all Events</button>
+      <button onClick={toggleAllEvents}>Toggle All Events</button>
       <Form />
     </div>
   );
