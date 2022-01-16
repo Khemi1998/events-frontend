@@ -4,11 +4,23 @@
   width: 100%;
   height: 10rem;
   background-color: $color-primary;
+  display: flex;
+  flex-direction: row;
+}
+
+.greeting {
+  display: flex;
 }
 
 @media screen and (min-width: 961px) {
   .leftmenu {
     width: 17rem;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .greeting {
+    flex-direction: column;
   }
 }

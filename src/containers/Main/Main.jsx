@@ -13,8 +13,13 @@ function App() {
     <div className="events">
       <div className="events__container">
         <LeftMenu />
-        <Calendar onClickDay={onClickDay} value={value}/>
-        <RightMenu test={value.getUTCDate()} />
+        <Calendar onClickDay={onClickDay} value={value} />
+        <RightMenu
+          day={value.getUTCDay()}
+          date={value.getUTCDate()}
+          month={value.getUTCMonth()}
+          year={value.getUTCFullYear()}
+        />
       </div>
     </div>
   );
