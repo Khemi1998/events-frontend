@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 
 .log-form {
-  width: 79%;
+  width: 80%;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,6 @@
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
     box-shadow:inset 0px 1px 1px fadeout(white, 95%);
-    border: 1px solid darken(grey, 5%);
     margin: 0;
     font-weight: 200;
   }

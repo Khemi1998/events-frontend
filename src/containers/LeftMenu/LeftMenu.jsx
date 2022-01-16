@@ -25,6 +25,7 @@ export const LeftMenu = () => {
         <img src={greetingImg} className="greeting__img" alt={greetingTime} />
         <h1 className="greeting__heading">Good {greetingTime}</h1>
       </header>
+      <button>View all Events</button>
       <Form />
     </div>
   );
