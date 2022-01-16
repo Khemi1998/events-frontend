@@ -3,22 +3,22 @@ import "./Main.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import LeftMenu from "../../containers/LeftMenu/LeftMenu";
 import RightMenu from "../../containers/RightMenu/RightMenu";
+import AllEvents from "../AllEvents/AllEvents";
 
 function App() {
   const [value, onClickDay] = useState(new Date());
   const [showAllEvents, setShowAllEvents] = useState(false);
 
   const toggleAll = () => {
-    setShowAllEvents(!showAllEvents)
-  }
+    setShowAllEvents(!showAllEvents);
+  };
 
   console.log(value);
-  //Thu Jan 20 2022 00:00:00 GMT+0000 (Greenwich Mean Time)
 
   return (
     <div className="events">
       <div className="events__container">
-        <LeftMenu toggleAllEvents = {toggleAll}/>
+        <LeftMenu toggleAllEvents={toggleAll} />
         {!showAllEvents && (
           <>
             <Calendar onClickDay={onClickDay} value={value} />
@@ -30,6 +30,7 @@ function App() {
             />
           </>
         )}
+        {showAllEvents && <AllEvents />}
       </div>
     </div>
   );

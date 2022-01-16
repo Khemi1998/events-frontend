@@ -52,9 +52,25 @@ export const RightMenu = (props) => {
       title: "Testing Event 3",
       location: "Home",
       date: "2022-01-03",
-      time: "00:00:00",
+      time: "01:00:00",
       description: "third event",
     },
+    {
+      id: 4,
+      title: "Testing Event 4",
+      location: "Home",
+      date: "2022-01-03",
+      time: "00:00:00",
+      description: "fourth event",
+    },
+    {
+      id: 5,
+      title: "Testing Event 5",
+      location: "Home",
+      date: "2022-01-03",
+      time: "00:30:00",
+      description: "fifth event",
+    }
   ];
 
   const filteredListings = mockData.map((event) => {
@@ -84,6 +100,7 @@ export const RightMenu = (props) => {
       <h2>
         {days[day]} {date} {months[month]} {year}
       </h2>
+
       <div className="rightmenu__results">{filteredListings}</div>
     </div>
   );
