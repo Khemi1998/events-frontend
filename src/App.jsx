@@ -1,16 +1,11 @@
+import React from "react";
 import "./App.scss";
-import Calendar from "./components/Calendar/Calendar";
-import LeftMenu from "./containers/LeftMenu/LeftMenu";
-import RightMenu from "./containers/RightMenu/RightMenu";
+import Main from "./containers/Main/Main";
 
 function App() {
   return (
     <div className="events">
-      <div className="events__container">
-        <LeftMenu />
-        <Calendar />
-        <RightMenu />
-      </div>
+      <Main />
     </div>
   );
 }
