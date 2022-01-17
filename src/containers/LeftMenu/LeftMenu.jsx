@@ -4,7 +4,7 @@ import Form from "../../components/Form/Form";
 import sunrise from "../../assets/images/sunrise.png";
 import sun from "../../assets/images/sun.png";
 import moon from "../../assets/images/moon.png";
-import { useState } from "react/cjs/react.development";
+import Button from "../../components/Button/Button";
 
 export const LeftMenu = (props) => {
   const { toggleAllEvents } = props;
@@ -29,7 +29,7 @@ export const LeftMenu = (props) => {
         <img src={greetingImg} className="greeting__img" alt={greetingTime} />
         <h1 className="greeting__heading">Good {greetingTime}</h1>
       </header>
-      <button onClick={toggleAllEvents}>Toggle All Events</button>
+      <Button click={toggleAllEvents} isSecondary={false} buttonText="Toggle All Events" />
       <Form />
     </div>
   );

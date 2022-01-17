@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.scss";
+import Button from "../Button/Button";
 
 const Form = () => {
   const [event, setEvent] = useState({
@@ -34,7 +35,7 @@ const Form = () => {
         <input type="date" placeholder="Date" onInput={(e) => setEvent({ ...event, date: e.target.value })} required/>
         <input type="time" placeholder="Time" onInput={(e) => setEvent({ ...event, time: e.target.value })} required/>
         <input type="text" placeholder="Description" onInput={(e) => setEvent({ ...event, description: e.target.value })} required/>
-        <button type="submit" className="btn">Submit</button>
+        <Button click="" isSecondary={true} buttonText="Submit" />
       </form>
     </div>
   );

@@ -42,25 +42,5 @@
       outline: none;
     }
   }
-  
-  .btn {
-    display: inline-block;
-    background: $color-secondary;
-    border: 1px solid darken($color-secondary, 5%);
-    padding: .5em 2em;
-    color: white;
-    margin-right: .5em;
-    box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
-    &:hover {
-      background: lighten($color-secondary, 5%);
-    }
-    &:active {
-      background: $color-secondary; 
-      box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
-    }
-    &:focus {
-      outline: none;
-    }
-  }
 }
 

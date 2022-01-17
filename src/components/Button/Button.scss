@@ -1,0 +1,18 @@
+@use "../../assets/styles/variables" as *;
+
+.button {
+  min-width: 80px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+}
+
+.primary {
+  border: 2px solid $color-tertiary;
+}
+
+.secondary {
+  border: 2px solid $color-secondary;
+}
