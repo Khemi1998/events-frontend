@@ -1,11 +1,11 @@
 import React from "react";
-import "./FilteredCard.scss";
+import "./ListCard.scss";
 
-export const FilteredCard = (props) => {
+export const ListCard = (props) => {
   const { title, location, time, description } = props;
 
   return (
-    <div className="Filteredcard">
+    <div className="listcard">
       <h3>{title}</h3>
       <p>Location: {location}</p>
         <p>Time: {time}</p>
@@ -14,4 +14,4 @@ export const FilteredCard = (props) => {
   );
 };
 
-export default FilteredCard;
+export default ListCard;

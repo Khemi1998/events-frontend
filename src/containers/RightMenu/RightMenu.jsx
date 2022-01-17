@@ -3,7 +3,7 @@ import "./RightMenu.scss";
 import FilteredCard from "../../components/FilteredCard/FilteredCard";
 
 export const RightMenu = (props) => {
-  const { day, date, month, year } = props;
+  const { day, date, month, year, Events } = props;
 
   const days = {
     1: "Monday",
@@ -30,50 +30,7 @@ export const RightMenu = (props) => {
     11: "December",
   };
 
-  const mockData = [
-    {
-      id: 1,
-      title: "Testing Event 1",
-      location: "Home",
-      date: "2022-01-01",
-      time: "00:00:00",
-      description: "first event",
-    },
-    {
-      id: 2,
-      title: "Testing Event 2",
-      location: "Home",
-      date: "2022-01-02",
-      time: "00:00:00",
-      description: "second event",
-    },
-    {
-      id: 3,
-      title: "Testing Event 3",
-      location: "Home",
-      date: "2022-01-03",
-      time: "01:00:00",
-      description: "third event",
-    },
-    {
-      id: 4,
-      title: "Testing Event 4",
-      location: "Home",
-      date: "2022-01-03",
-      time: "00:00:00",
-      description: "fourth event",
-    },
-    {
-      id: 5,
-      title: "Testing Event 5",
-      location: "Home",
-      date: "2022-01-03",
-      time: "00:30:00",
-      description: "fifth event",
-    }
-  ];
-
-  const filteredListings = mockData.map((event) => {
+  const filteredListings = Events.map((event) => {
     let monthConvert = "";
     let dayConvert = "";
     if (
