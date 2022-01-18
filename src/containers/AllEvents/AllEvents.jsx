@@ -9,7 +9,10 @@ export const AllEvents = () => {
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
-    const superCleanInput = cleanInput.split("").map(word=>word.replace(/" "/g,"_")).join("");
+    const superCleanInput = cleanInput
+      .split("")
+      .map((word) => word.replace(/" "/g, "_"))
+      .join("");
     setSearchTerm(cleanInput);
   };
 
@@ -24,14 +27,16 @@ export const AllEvents = () => {
     getEvents();
   }, [filteredEvents]);
 
-  const showEvents = filteredEvents.map((event) => {
+  const showEvents = filteredEvents.map((event, index) => {
     return (
-      <ListCard
-        title={event.title}
-        location={event.location}
-        time={event.time}
-        description={event.description}
-      />
+      <div className="listcard" key={index}>
+        <ListCard
+          title={event.title}
+          location={event.location}
+          time={event.time}
+          description={event.description}
+        />
+      </div>
     );
   });
 
