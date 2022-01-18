@@ -33,6 +33,7 @@ export const AllEvents = () => {
         <ListCard
           title={event.title}
           location={event.location}
+          date={event.date.split("-").reverse().join("/")}
           time={event.time}
           description={event.description}
         />
