@@ -35,7 +35,7 @@ const Form = () => {
         <input type="date" placeholder="Date" onInput={(e) => setEvent({ ...event, date: e.target.value })} required/>
         <input type="time" placeholder="Time" onInput={(e) => setEvent({ ...event, time: e.target.value })} required/>
         <input type="text" placeholder="Description" onInput={(e) => setEvent({ ...event, description: e.target.value })} required/>
-        <Button click="" isSecondary={true} buttonText="Submit" />
+        <Button isSecondary={true} buttonText="Submit" />
       </form>
     </div>
   );

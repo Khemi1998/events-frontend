@@ -30,7 +30,7 @@ export const RightMenu = (props) => {
     11: "December",
   };
 
-  const filteredListings = Events.map((event) => {
+  const filteredListings = Events.map((event, index) => {
     let monthConvert = "";
     let dayConvert = "";
     if (
@@ -41,12 +41,14 @@ export const RightMenu = (props) => {
     if (day < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
     if (event.date === `${year}-${monthConvert}-${dayConvert}`) {
       return (
-        <FilteredCard
-          title={event.title}
-          location={event.location}
-          time={event.time}
-          description={event.description}
-        />
+        <div className="filtered" key={index}>
+          <FilteredCard
+            title={event.title}
+            location={event.location}
+            time={event.time}
+            description={event.description}
+          />
+        </div>
       );
     }
   });
@@ -57,7 +59,6 @@ export const RightMenu = (props) => {
       <h2>
         {days[day]} {date} {months[month]} {year}
       </h2>
-
       <div className="rightmenu__results">{filteredListings}</div>
     </div>
   );

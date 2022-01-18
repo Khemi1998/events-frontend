@@ -26,8 +26,6 @@ function App() {
     setShowAllEvents(!showAllEvents);
   };
 
-  console.log(value);
-
   return (
     <div className="events">
       <div className="events__container">

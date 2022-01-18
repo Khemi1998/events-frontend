@@ -142,6 +142,10 @@ abbr {
   border-radius: 5rem;
 }
 
+.highlight {
+  color: $color-select;
+}
+
 @media screen and (min-width: 961px) {
   .react-calendar {
     width: 35rem;
