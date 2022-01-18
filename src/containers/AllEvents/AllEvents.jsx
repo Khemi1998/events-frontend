@@ -9,10 +9,10 @@ export const AllEvents = () => {
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
-    const superCleanInput = cleanInput
-      .split("")
-      .map((word) => word.replace(/" "/g, "_"))
-      .join("");
+    // const superCleanInput = cleanInput
+    //   .split("")
+    //   .map((word) => word.replace(/" "/g, "_"))
+    //   .join("");
     setSearchTerm(cleanInput);
   };
 
