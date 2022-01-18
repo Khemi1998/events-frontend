@@ -25,7 +25,7 @@ export const AllEvents = () => {
 
   useEffect(() => {
     getEvents();
-  }, [filteredEvents]);
+  }, [filteredEvents,searchTerm]);
 
   const showEvents = filteredEvents.map((event, index) => {
     return (

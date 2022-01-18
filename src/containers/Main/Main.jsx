@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     getEvents();
-  }, [events]);
+  }, [events,showAllEvents,value]);
 
   const toggleAll = () => {
     setShowAllEvents(!showAllEvents);
