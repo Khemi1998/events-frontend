@@ -10,6 +10,7 @@ export const FilteredCard = (props) => {
       <p>Location: {location}</p>
         <p>Time: {time}</p>
       <p>Description: {description}</p>
+      <i className="far fa-trash-alt"></i>
     </div>
   );
 };
