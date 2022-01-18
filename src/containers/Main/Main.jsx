@@ -8,7 +8,6 @@ import AllEvents from "../AllEvents/AllEvents";
 function App() {
   const [value, onClickDay] = useState(new Date());
   const [showAllEvents, setShowAllEvents] = useState(false);
-
   const [events, setEvents] = useState([]);
 
   const getEvents = () => {
@@ -32,7 +31,7 @@ function App() {
         <LeftMenu toggleAllEvents={toggleAll} />
         {!showAllEvents && (
           <>
-            <Calendar onClickDay={onClickDay} value={value} />
+            <Calendar onClickDay={onClickDay} value={value} Events={events} />
             <RightMenu
               Events={events}
               day={value.getUTCDay()}
@@ -42,7 +41,7 @@ function App() {
             />
           </>
         )}
-        {showAllEvents && <AllEvents Events={events} />}
+        {showAllEvents && <AllEvents />}
       </div>
     </div>
   );
