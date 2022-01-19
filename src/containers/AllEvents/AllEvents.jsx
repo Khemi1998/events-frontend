@@ -25,12 +25,29 @@ export const AllEvents = () => {
 
   useEffect(() => {
     getEvents();
-  }, [filteredEvents,searchTerm]);
+  }, [searchTerm]);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:8080/event/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then((response => {
+      console.log({response})
+      getEvents();
+      window.location.reload()
+    }))
+    .catch(err => console.log(err))
+  }
 
   const showEvents = filteredEvents.map((event, index) => {
     return (
       <div className="listcard" key={index}>
         <ListCard
+        id={event.id}
+          handleDelete={handleDelete}
           title={event.title}
           location={event.location}
           date={event.date.split("-").reverse().join("/")}

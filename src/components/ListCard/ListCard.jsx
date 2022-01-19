@@ -2,7 +2,7 @@ import React from "react";
 import "./ListCard.scss";
 
 export const ListCard = (props) => {
-  const { title, location, date, time, description } = props;
+  const { title, location, date, time, description, handleDelete, id } = props;
 
   return (
     <div className="listcard">
@@ -11,7 +11,7 @@ export const ListCard = (props) => {
       <p>Date: {date}</p>
       <p>Time: {time}</p>
       <p>Description: {description}</p>
-      <i className="far fa-trash-alt"></i>
+      <i onClick={()=>handleDelete(id)} className="far fa-trash-alt"></i>
     </div>
   );
 };

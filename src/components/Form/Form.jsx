@@ -20,8 +20,10 @@ const Form = () => {
       },
       body: JSON.stringify(event)
     })
-    .then((response) => response.json())
-    .then((json => console.log(json)))
+    .then((response => {
+      console.log({response})
+      window.location.reload();
+    }))
     .catch(err => console.log(err))
     e.target.reset();
   }

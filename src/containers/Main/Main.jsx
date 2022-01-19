@@ -10,16 +10,15 @@ function App() {
   const [showAllEvents, setShowAllEvents] = useState(false);
   const [events, setEvents] = useState([]);
 
-  const getEvents = () => {
-    fetch("http://localhost:8080/events")
-      .then((res) => res.json())
-      .then((json) => setEvents(json))
-      .catch((err) => console.log(err));
-  };
-
   useEffect(() => {
+    const getEvents = () => {
+      fetch("http://localhost:8080/events")
+        .then((res) => res.json())
+        .then((json) => setEvents(json))
+        .catch((err) => console.log(err));
+    };
     getEvents();
-  }, [events,showAllEvents,value]);
+  }, []);
 
   const toggleAll = () => {
     setShowAllEvents(!showAllEvents);

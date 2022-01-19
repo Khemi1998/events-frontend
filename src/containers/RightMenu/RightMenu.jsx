@@ -3,7 +3,7 @@ import "./RightMenu.scss";
 import FilteredCard from "../../components/FilteredCard/FilteredCard";
 
 export const RightMenu = (props) => {
-  const { day, date, month, year, Events } = props;
+  const { day, date, month, year, Events, calendarDay } = props;
 
   const days = {
     1: "Monday",
@@ -31,14 +31,20 @@ export const RightMenu = (props) => {
   };
 
   const filteredListings = Events.map((event, index) => {
-    let monthConvert = "";
-    let dayConvert = "";
+    let monthConvert;
+    let dayConvert;
     if (
       month + 1 < 10
         ? (monthConvert = `0${month + 1}`)
         : (monthConvert = `${month + 1}`)
     );
-    if (day < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
+    
+    if (date < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
+    
+    console.log(event.date)
+    console.log(`${year}-${monthConvert}-${dayConvert}`)
+
+
     if (event.date === `${year}-${monthConvert}-${dayConvert}`) {
       return (
         <div className="filtered" key={index}>
