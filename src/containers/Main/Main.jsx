@@ -11,13 +11,10 @@ function App() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const getEvents = () => {
-      fetch("http://localhost:8080/events")
-        .then((res) => res.json())
-        .then((json) => setEvents(json))
-        .catch((err) => console.log(err));
-    };
-    getEvents();
+    fetch("http://localhost:8080/events")
+      .then((res) => res.json())
+      .then((json) => setEvents(json))
+      .catch((err) => console.log(err));
   }, []);
 
   const toggleAll = () => {
