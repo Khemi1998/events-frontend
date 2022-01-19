@@ -38,12 +38,11 @@ export const RightMenu = (props) => {
         ? (monthConvert = `0${month + 1}`)
         : (monthConvert = `${month + 1}`)
     );
-    
-    if (date < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
-    
-    console.log(event.date)
-    console.log(`${year}-${monthConvert}-${dayConvert}`)
 
+    if (date < 10 ? (dayConvert = `0${date}`) : (dayConvert = `${date}`));
+
+    // console.log(event.date);
+    // console.log(`${year}-${monthConvert}-${dayConvert}`);
 
     if (event.date === `${year}-${monthConvert}-${dayConvert}`) {
       return (
