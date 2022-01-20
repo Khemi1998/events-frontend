@@ -12,15 +12,17 @@ export const Schedule = (props) => {
   })
 
   return (
-    <Calendar
-      onClickDay={onClickDay}
-      value={value}
-      tileClassName={({ date, view }) => {
-        if (mark.find((x) => x === moment(date).format("DD-MM-YYYY"))) {
-          return "highlight";
-        }
-      }}
-    />
+    <div className="calendar">
+      <Calendar
+        onClickDay={onClickDay}
+        value={value}
+        tileClassName={({ date, view }) => {
+          if (mark.find((x) => x === moment(date).format("DD-MM-YYYY"))) {
+            return "highlight";
+          }
+        }}
+      />
+    </div>
   );
 };
 

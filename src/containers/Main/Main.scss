@@ -14,9 +14,10 @@
   background-image: linear-gradient($color-primary, $color-secondary);
   align-items: center;
   &__container {
+    height: 100vh;
+    width: 100vw;
     background-color: $color-tertiary;
     border-radius: 0.5rem;
-    width: fit-content;
     box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem black;
     overflow: hidden;
   }
@@ -28,7 +29,7 @@
     &__container {
       display: flex;
       align-items: center;
-      height: 70vh;
+      height: 80vh;
       width: fit-content;
     }
   }

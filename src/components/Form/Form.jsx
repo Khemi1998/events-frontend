@@ -30,8 +30,8 @@ const Form = () => {
 
   return (
     <div className="log-form">
-      <h2>Create New Event</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="log-form--title">Create New Event</h2>
+      <form className="log-form--form" onSubmit={handleSubmit}>
         <input type="text" placeholder="Title" onInput={(e) => setEvent({ ...event, title: e.target.value })} required/>
         <input type="text" placeholder="Location" onInput={(e) => setEvent({ ...event, location: e.target.value })} required/>
         <input type="date" placeholder="Date" onInput={(e) => setEvent({ ...event, date: e.target.value })} required/>

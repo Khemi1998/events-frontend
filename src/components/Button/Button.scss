@@ -7,6 +7,9 @@
   border: none;
   background-color: transparent;
   align-items: center;
+  width: 10rem;
+  height: 2rem;
+  margin-top: 1rem;
 }
 
 .primary {
@@ -15,4 +18,10 @@
 
 .secondary {
   border: 2px solid $color-secondary;
+}
+
+@media screen and (min-width: 961px) {
+.primary {
+  margin-top: 3rem;
+}
 }

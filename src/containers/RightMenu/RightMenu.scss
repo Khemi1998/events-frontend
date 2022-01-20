@@ -1,17 +1,27 @@
 @use "../../assets/styles/variables" as *;
 
 .rightmenu {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  &__header {
+    margin: 1rem;
+    font-size: 12px;
+  }
+}
+
+.filtered {
+  padding: 1rem;
 }
 
 @media screen and (min-width: 961px) {
   .rightmenu {
-    display: block;
     width: 17rem;
     height: 100%;
-    background-color: $color-primary;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
   }
 }
