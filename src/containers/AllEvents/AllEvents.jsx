@@ -60,13 +60,15 @@ export const AllEvents = () => {
 
   return (
     <div className="all-events">
-      <h1>Events</h1>
-      <SearchBox
-        label={"search-Events"}
-        searchTerm={searchTerm}
-        handleInput={handleInput}
-        placeholder="Search for Event"
-      />
+      <div className="all-events__heading">
+        <h1>Events</h1>
+        <SearchBox
+          label={"search-Events"}
+          searchTerm={searchTerm}
+          handleInput={handleInput}
+          placeholder="Search for Event"
+        />
+      </div>
       <div className="all-events__events">{showEvents}</div>
     </div>
   );
