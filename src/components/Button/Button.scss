@@ -8,8 +8,9 @@
   background-color: transparent;
   align-items: center;
   width: 10rem;
-  height: 2rem;
+  height: 3rem;
   margin-top: 6vh;
+  font-size: 15px;
 }
 
 .primary {
@@ -21,7 +22,11 @@
 }
 
 @media screen and (min-width: 961px) {
+  .button {
+    margin: 1vh;
+  }
+
 .primary {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 }

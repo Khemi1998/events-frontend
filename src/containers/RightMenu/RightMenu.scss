@@ -10,7 +10,7 @@
   align-items:flex-start;
   &__header {
     margin: 1rem;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -22,6 +22,8 @@
   .rightmenu {
     width: 17rem;
     height: 100%;
-
+    &__header {
+      font-size: 12px;
+    }
   }
 }
