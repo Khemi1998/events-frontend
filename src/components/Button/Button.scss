@@ -9,7 +9,6 @@
   align-items: center;
   width: 10.5rem;
   height: 3rem;
-  margin-top: 6vh;
   font-size: 15px;
   color: $color-tertiary;
 }
@@ -31,8 +30,12 @@
   .primary {
     margin-top: 4rem;
   }
+  
+  .primary:hover {
+    box-shadow: 0 0 0.5rem 0.5rem $color-tertiary;
+  }
 
-  .secondary {
-    margin-left: 0.5rem;
+  .secondary:hover {
+    box-shadow: 0 0 0.5rem 0.5rem $color-secondary;
   }
 }
