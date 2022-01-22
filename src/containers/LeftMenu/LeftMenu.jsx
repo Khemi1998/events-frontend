@@ -13,16 +13,16 @@ export const LeftMenu = (props) => {
 
   const currentHour = new Date().getHours();
   let greetingImg = sunrise;
-  let greetingTime = "Morning!";
+  let greetingTime = "Morning";
 
   if (currentHour >= 12) {
     greetingImg = sun;
-    greetingTime = "Afternoon!";
+    greetingTime = "Afternoon";
   }
 
   if (currentHour >= 18) {
     greetingImg = moon;
-    greetingTime = "Evening!";
+    greetingTime = "Evening";
   }
 
   const toggleForm = () => {

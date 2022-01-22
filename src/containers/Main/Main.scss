@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient($color-primary, $color-secondary);
+  background-image: linear-gradient($color-primary, $color-primary,$color-primary, $color-secondary);
   align-items: center;
   &__container {
     height: 100vh;
