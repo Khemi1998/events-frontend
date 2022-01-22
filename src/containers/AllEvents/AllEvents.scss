@@ -3,6 +3,9 @@
 .all-events {
   width: 100%;
   padding: 1rem;
+  &__heading {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 961px) {
@@ -11,7 +14,7 @@
     padding: 1rem;
     height: 100%;
     &__heading {
-        margin: 2rem;
+      margin: 2rem;
     }
   }
 }
