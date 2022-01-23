@@ -9,10 +9,6 @@ export const AllEvents = () => {
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
-    // const superCleanInput = cleanInput
-    //   .split("")
-    //   .map((word) => word.replace(/" "/g, "_"))
-    //   .join("");
     setSearchTerm(cleanInput);
   };
 
@@ -29,24 +25,24 @@ export const AllEvents = () => {
 
   const handleDelete = (id) => {
     fetch(`http://localhost:8080/event/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
     })
-    .then((response => {
-      console.log({response})
-      getEvents();
-      window.location.reload()
-    }))
-    .catch(err => console.log(err))
-  }
+      .then((response) => {
+        console.log({ response });
+        getEvents();
+        window.location.reload();
+      })
+      .catch((err) => console.log(err));
+  };
 
   const showEvents = filteredEvents.map((event, index) => {
     return (
-      <div className="listcard" key={index}>
+      <div className="listcards" key={index}>
         <ListCard
-        id={event.id}
+          id={event.id}
           handleDelete={handleDelete}
           title={event.title}
           location={event.location}
@@ -69,7 +65,9 @@ export const AllEvents = () => {
           placeholder="Search for Event"
         />
       </div>
-      <div className="all-events__events">{showEvents}</div>
+      <div className="all-events--container">
+        <div className="all-events__events">{showEvents}</div>
+      </div>
     </div>
   );
 };

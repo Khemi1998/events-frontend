@@ -3,7 +3,7 @@ import "./RightMenu.scss";
 import FilteredCard from "../../components/FilteredCard/FilteredCard";
 
 export const RightMenu = (props) => {
-  const { day, date, month, year, Events, calendarDay } = props;
+  const { day, date, month, year, Events } = props;
 
   const days = {
     1: "Monday",

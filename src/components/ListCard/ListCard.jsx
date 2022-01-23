@@ -6,12 +6,12 @@ export const ListCard = (props) => {
 
   return (
     <div className="listcard">
-      <h3>{title}</h3>
+      <h3><i onClick={()=>handleDelete(id)} className="far fa-trash-alt"></i> {title}</h3>
       <p>Location: {location}</p>
       <p>Date: {date}</p>
       <p>Time: {time}</p>
       <p>Description: {description}</p>
-      <i onClick={()=>handleDelete(id)} className="far fa-trash-alt"></i>
+      
     </div>
   );
 };
