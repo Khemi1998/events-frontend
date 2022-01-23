@@ -5,7 +5,7 @@ export const FilteredCard = (props) => {
   const { title, location, time, description } = props;
 
   return (
-    <div className="Filteredcard">
+    <div className="filteredcard">
       <h3>{title}</h3>
       <p>Location: {location}</p>
       <p>Time: {time}</p>

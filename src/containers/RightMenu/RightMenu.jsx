@@ -61,10 +61,7 @@ export const RightMenu = (props) => {
   return (
     <div className="rightmenu">
       <div className="rightmenu__header">
-        <h1 className="rightmenu__header--title">Events for: </h1>
-        <h2 className="rightmenu__header--date">
-          {days[day]} {date} {months[month]} {year}
-        </h2>
+        <h1 className="rightmenu__header--title">Events for: {days[day]} {date} {months[month]} {year} </h1>
       </div>
       <div className="rightmenu__results">{filteredListings}</div>
     </div>
