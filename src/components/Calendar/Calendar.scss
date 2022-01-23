@@ -115,7 +115,7 @@ abbr {
   border-radius: 5rem;
 }
 .react-calendar__tile--now {
-  background: $color-active-click;
+  background: $color-secondary;
   border-radius: 5rem;
 }
 .react-calendar__tile--now:enabled:hover,
@@ -129,11 +129,11 @@ abbr {
 }
 .react-calendar__tile--hasActive:enabled:hover,
 .react-calendar__tile--hasActive:enabled:focus {
-  background: $color-active-click;
+  background: $color-secondary;
   border-radius: 5rem;
 }
 .react-calendar__tile--active {
-  background: $color-active-click;
+  background: $color-secondary;
   color: $color-tertiary;
   border-radius: 5rem;
 }
