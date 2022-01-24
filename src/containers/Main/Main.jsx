@@ -10,6 +10,7 @@ function App() {
   const [showAllEvents, setShowAllEvents] = useState(false);
   const [events, setEvents] = useState([]);
 
+  //GET
   useEffect(() => {
     fetch("http://localhost:8080/events")
       .then((res) => res.json())

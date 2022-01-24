@@ -12,6 +12,7 @@ export const AllEvents = () => {
     setSearchTerm(cleanInput);
   };
 
+  //DELETE
   const getEvents = () => {
     fetch(`http://localhost:8080/events/${searchTerm}`)
       .then((res) => res.json())

@@ -10,7 +10,8 @@ const Form = () => {
     time: "",
     description: ""
   })
-
+  
+  //POST
   const handleSubmit = (e) => {
     e.preventDefault()
     fetch('http://localhost:8080/event', {
