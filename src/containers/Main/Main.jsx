@@ -29,7 +29,7 @@ function App() {
     setShowAllEvents(!showAllEvents);
   };
 
-  //DELETE
+  //SEARCH
   const getEvents = () => {
     fetch(`http://localhost:8080/events/${searchTerm}`)
       .then((res) => res.json())
@@ -41,6 +41,7 @@ function App() {
     getEvents();
   }, [searchTerm]);
 
+  //DELETE
   const handleDelete = (id) => {
     fetch(`http://localhost:8080/event/${id}`, {
       method: "DELETE",
