@@ -9,6 +9,13 @@ function App() {
   const [value, onClickDay] = useState(new Date());
   const [showAllEvents, setShowAllEvents] = useState(false);
   const [events, setEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleInput = (event) => {
+    const cleanInput = event.target.value.toLowerCase();
+    setSearchTerm(cleanInput);
+  };
 
   //GET
   useEffect(() => {
@@ -16,10 +23,37 @@ function App() {
       .then((res) => res.json())
       .then((json) => setEvents(json))
       .catch((err) => console.log(err));
-  }, []);
+  }, [filteredEvents]);
 
   const toggleAll = () => {
     setShowAllEvents(!showAllEvents);
+  };
+
+  //DELETE
+  const getEvents = () => {
+    fetch(`http://localhost:8080/events/${searchTerm}`)
+      .then((res) => res.json())
+      .then((json) => setFilteredEvents(json))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getEvents();
+  }, [searchTerm]);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:8080/event/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        console.log({ response });
+        getEvents();
+        // window.location.reload();
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -38,7 +72,14 @@ function App() {
             />
           </>
         )}
-        {showAllEvents && <AllEvents />}
+        {showAllEvents && (
+          <AllEvents
+            handleDelete={handleDelete}
+            handleInput={handleInput}
+            searchTerm={searchTerm}
+            filteredEvents={filteredEvents}
+          />
+        )}
       </div>
     </div>
   );

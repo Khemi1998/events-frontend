@@ -3,41 +3,8 @@ import "./AllEvents.scss";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import ListCard from "../../components/ListCard/ListCard";
 
-export const AllEvents = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredEvents, setFilteredEvents] = useState([]);
-
-  const handleInput = (event) => {
-    const cleanInput = event.target.value.toLowerCase();
-    setSearchTerm(cleanInput);
-  };
-
-  //DELETE
-  const getEvents = () => {
-    fetch(`http://localhost:8080/events/${searchTerm}`)
-      .then((res) => res.json())
-      .then((json) => setFilteredEvents(json))
-      .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    getEvents();
-  }, [searchTerm]);
-
-  const handleDelete = (id) => {
-    fetch(`http://localhost:8080/event/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        console.log({ response });
-        getEvents();
-        window.location.reload();
-      })
-      .catch((err) => console.log(err));
-  };
+export const AllEvents = (props) => {
+  const { handleDelete, handleInput, searchTerm, filteredEvents } = props;
 
   const showEvents = filteredEvents.map((event, index) => {
     return (
