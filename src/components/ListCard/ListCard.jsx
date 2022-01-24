@@ -11,7 +11,6 @@ export const ListCard = (props) => {
       <p>Date: {date}</p>
       <p>Time: {time}</p>
       <p>Description: {description}</p>
-      
     </div>
   );
 };
