@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Events API 🍻
+created by Khemi Ramyead
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://khemi1998.github.io/punk_api/
 
-## Available Scripts
+![Screenshot 2021-12-27 at 21 16 01](https://user-images.githubusercontent.com/93138312/147507782-9870cf06-59f0-4b9c-9ae8-126f91951312.png)
 
-In the project directory, you can run:
+The purpose of this project is to have a better understanding of how backend interacts with the frontend of a Full-Stack project. Please refer to https://github.com/Khemi1998/events-backend for the backend code.
 
-### `npm start`
+<h2>Technologies 🧠</h2>
+<ul>
+  <li>JavaScript</li>
+  <li>Java</li>
+  <li>springboot</li>
+  <li>React</li>
+  <li>mySQL</li>
+  <li>SCSS</li>
+  <li>HTML</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ▫️◽️ Design ◽️▫️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page has been deisgned with the mobile-first approach. The design has been based on a calendar. The user can see which days have events by the coloured days on the calendar. The user can then click on the day to see the events for that given day on the right hand-side. The option is given to the user to see all events on the 'toggle' button where the user can search and delete specific events. The left side-hand has a form where the user can add events to the calendar.
 
-### `npm test`
+## ◾️◼️ Future Improvements ◼️◾️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+At the moment, the Full-Stack project works when the react-app, springboot, and mySql are activated on local server. I plan to move the database and springboot code to google cloud.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Psuedo Code ✍️
+<ul>
+  <li>Create endpoints using arraylists in SpringBoot</li>
+  <li>Test endpoints on PostMan</li>
+  <li>Replace arraylists with repository linked to mySql database</li>
+  <li>Connect react-app to springboot with fetch</li>
+  <li>Style react-app</li>
+</ul>
