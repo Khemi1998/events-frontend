@@ -1,9 +1,8 @@
 # Events API 🍻
 created by Khemi Ramyead
 
-https://khemi1998.github.io/punk_api/
-
-![Screenshot 2021-12-27 at 21 16 01](https://user-images.githubusercontent.com/93138312/147507782-9870cf06-59f0-4b9c-9ae8-126f91951312.png)
+![Screenshot 2022-02-08 at 14 58 09](https://user-images.githubusercontent.com/93138312/153013358-334e81fc-1407-4b02-a176-8158b92c5795.png)
+![Screenshot 2022-02-08 at 14 58 23](https://user-images.githubusercontent.com/93138312/153013389-084ca6e2-02a7-46f5-b87f-c467dd0cb48d.png)
 
 The purpose of this project is to have a better understanding of how backend interacts with the frontend of a Full-Stack project. Please refer to https://github.com/Khemi1998/events-backend for the backend code.
 
