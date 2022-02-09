@@ -1,4 +1,4 @@
-# Events API 🍻
+# Events API 📆
 created by Khemi Ramyead
 
 ![Screenshot 2022-02-08 at 14 58 09](https://user-images.githubusercontent.com/93138312/153013358-334e81fc-1407-4b02-a176-8158b92c5795.png)
